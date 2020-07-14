@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>First Innings Score Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='ipl-favicon.ico') }}">
+        # <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>Goals Predictor for PL teams</span><span class="heading_second">   English Premier League</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+
+             <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="home_team">
+                        <option value="none">Select HomeTeam</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Aston Villa">Aston Villa</option>
+                        <option value="Bournemouth">Bournemouth</option>
+                        
+                        <option value="Brighton">Brighton</option>
+                        <option value="Burnley">Burnley</option>
+                        
+                        
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Crystal Palace">Crystal Palace</option>
+                        
+                        <option value="Everton">Everton</option>
+                        <option value="Fulham">Fulham</option>
+                        <option value="Huddersfield">Huddersfield</option>
+                        
+                        <option value="Leicester">Leicester</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Man City">Man City</option>
+                        <option value="Man United">Man United</option>
+                        
+                        <option value="Newcastle">Newcastle</option>
+                        <option value="Southampton">Southampton</option>
+                        <option value="Swansea">Swansea</option>
+                        <option value="Tottenham">Tottenham</option>
+                        <option value="Watford">Watford</option>
+                        <option value="West Ham">West Ham</option>
+                        <option value="Wolves">Wolves</option>
+                        
+                    </select><br>
+                    <!-- Bowling Team Dropdown -->
+                    <select class="form-input align-center" name="away_team">
+                        <option value="none">Select AwayTeam</option>
+                        <option value="Arsenal">Arsenal</option>
+                        <option value="Aston Villa">Aston Villa</option>
+                        <option value="Bournemouth">Bournemouth</option>
+                        
+                        <option value="Brighton">Brighton</option>
+                        <option value="Burnley">Burnley</option>
+                        
+                        
+                        <option value="Chelsea">Chelsea</option>
+                        <option value="Crystal Palace">Crystal Palace</option>
+                        
+                        <option value="Everton">Everton</option>
+                        <option value="Fulham">Fulham</option>
+                        <option value="Huddersfield">Huddersfield</option>
+                        
+                        <option value="Leicester">Leicester</option>
+                        <option value="Liverpool">Liverpool</option>
+                        <option value="Man City">Man City</option>
+                        <option value="Man United">Man United</option>
+                        
+                        <option value="Newcastle">Newcastle</option>
+                        <option value="Southampton">Southampton</option>
+                        <option value="Swansea">Swansea</option>
+                        <option value="Tottenham">Tottenham</option>
+                        <option value="Watford">Watford</option>
+                        <option value="West Ham">West Ham</option>
+                        <option value="Wolves">Wolves</option>
+                    </select><br>
+                    <input class="form-input" type="text" name="hometeam_shotsOnTarget" placeholder="HomeTeam_ShotsOnTarget"><br>
+                    <input class="form-input" type="text" name="awayteam_shotsOnTarget" placeholder="AwayTeam_ShotsOnTarget"><br>
+                    
+                   
+
+            			<input type="submit" class="myButton" value="Predict Score">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
+
